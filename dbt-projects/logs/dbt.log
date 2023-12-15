@@ -1,0 +1,31 @@
+[0m06:05:44.732808 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0cc16720f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0cc16fc590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0cc16724e0>]}
+
+
+============================== 06:05:44.737651 | d7b1f37b-0a91-4fad-a25c-bb822247ac30 ==============================
+[0m06:05:44.737651 [info ] [MainThread]: Running with dbt=1.7.4
+[0m06:05:44.738639 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/gitpod/.dbt', 'fail_fast': 'False', 'warn_error': 'None', 'log_path': 'logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'invocation_command': 'dbt init pythia_ctes', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m06:05:44.739458 [warn ] [MainThread]: [ConfigFolderDirectory]: Unable to parse dict {'dir': PosixPath('/home/gitpod/.dbt')}
+[0m06:05:44.740111 [info ] [MainThread]: Creating dbt configuration folder at 
+[0m06:05:44.741395 [debug] [MainThread]: Starter project path: /workspace/.pyenv_mirror/user/current/lib/python3.12/site-packages/dbt/include/starter_project
+[0m06:05:44.744630 [info ] [MainThread]: 
+Your new dbt project "pythia_ctes" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m06:05:44.745339 [info ] [MainThread]: Setting up your profile.
+[0m06:07:49.483094 [info ] [MainThread]: Profile pythia_ctes written to /home/gitpod/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m06:07:49.485249 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 124.76237, "process_user_time": 2.691015, "process_kernel_time": 0.207307, "process_mem_max_rss": "110100", "process_in_blocks": "31104", "process_out_blocks": "80"}
+[0m06:07:49.486256 [debug] [MainThread]: Command `dbt init` succeeded at 06:07:49.485927 after 124.76 seconds
+[0m06:07:49.486941 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0cc1bc43e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0cc17c2de0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0cc0810ef0>]}
+[0m06:07:49.487659 [debug] [MainThread]: Flushing usage events
