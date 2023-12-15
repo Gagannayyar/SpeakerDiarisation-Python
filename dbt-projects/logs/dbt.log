@@ -29,3 +29,56 @@ Happy modeling!
 [0m06:07:49.486256 [debug] [MainThread]: Command `dbt init` succeeded at 06:07:49.485927 after 124.76 seconds
 [0m06:07:49.486941 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0cc1bc43e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0cc17c2de0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0cc0810ef0>]}
 [0m06:07:49.487659 [debug] [MainThread]: Flushing usage events
+[0m09:23:09.071585 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fdc406f62d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fdc41153e00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fdc407d0830>]}
+
+
+============================== 09:23:09.075572 | 1021bbd8-56f4-420f-88c1-cb6e0da965e0 ==============================
+[0m09:23:09.075572 [info ] [MainThread]: Running with dbt=1.7.4
+[0m09:23:09.076555 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': '/workspace/SpeakerDiarisation-Python/profiles.yml', 'log_path': 'logs', 'debug': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt init test_profiles', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m09:23:09.077805 [debug] [MainThread]: Starter project path: /workspace/.pyenv_mirror/user/current/lib/python3.12/site-packages/dbt/include/starter_project
+[0m09:23:09.081130 [info ] [MainThread]: 
+Your new dbt project "test_profiles" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m09:23:09.081908 [info ] [MainThread]: Setting up your profile.
+[0m09:24:22.410065 [error] [MainThread]: Encountered an error:
+[Errno 20] Not a directory: '/workspace/SpeakerDiarisation-Python/profiles.yml/profiles.yml'
+[0m09:24:22.412226 [error] [MainThread]: Traceback (most recent call last):
+  File "/workspace/.pyenv_mirror/user/current/lib/python3.12/site-packages/dbt/cli/requires.py", line 90, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/.pyenv_mirror/user/current/lib/python3.12/site-packages/dbt/cli/requires.py", line 75, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/.pyenv_mirror/user/current/lib/python3.12/site-packages/dbt/cli/main.py", line 515, in init
+    results = task.run()
+              ^^^^^^^^^^
+  File "/workspace/.pyenv_mirror/user/current/lib/python3.12/site-packages/dbt/task/init.py", line 344, in run
+    self.setup_profile(profile_name)
+  File "/workspace/.pyenv_mirror/user/current/lib/python3.12/site-packages/dbt/task/init.py", line 264, in setup_profile
+    self.create_profile_from_target(adapter, profile_name=profile_name)
+  File "/workspace/.pyenv_mirror/user/current/lib/python3.12/site-packages/dbt/task/init.py", line 181, in create_profile_from_target
+    self.create_profile_from_profile_template(profile_template, profile_name)
+  File "/workspace/.pyenv_mirror/user/current/lib/python3.12/site-packages/dbt/task/init.py", line 168, in create_profile_from_profile_template
+    self.write_profile(profile, profile_name)
+  File "/workspace/.pyenv_mirror/user/current/lib/python3.12/site-packages/dbt/task/init.py", line 158, in write_profile
+    with open(profiles_filepath, "w") as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+NotADirectoryError: [Errno 20] Not a directory: '/workspace/SpeakerDiarisation-Python/profiles.yml/profiles.yml'
+
+[0m09:24:22.413635 [debug] [MainThread]: Resource report: {"command_name": "init", "command_wall_clock_time": 73.35127, "process_user_time": 2.511663, "process_kernel_time": 0.156242, "process_mem_max_rss": "109808", "process_in_blocks": "3072", "process_out_blocks": "80", "command_success": false}
+[0m09:24:22.414543 [debug] [MainThread]: Command `dbt init` failed at 09:24:22.414307 after 73.35 seconds
+[0m09:24:22.415213 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fdc40809790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fdc3fc03140>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fdc3fcecef0>]}
+[0m09:24:22.415876 [debug] [MainThread]: Flushing usage events

@@ -1,0 +1,30 @@
+[0m09:25:55.414735 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f98390ee000>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f98392722d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f98390ee0c0>]}
+
+
+============================== 09:25:55.418636 | 3e5b357a-9083-4945-a6f4-943a4416f33a ==============================
+[0m09:25:55.418636 [info ] [MainThread]: Running with dbt=1.7.4
+[0m09:25:55.419499 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'profiles_dir': '/workspace/SpeakerDiarisation-Python/profiles.yml', 'log_path': 'logs', 'fail_fast': 'False', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'invocation_command': 'dbt init test_profiles', 'log_format': 'default', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m09:25:55.420241 [info ] [MainThread]: Creating dbt configuration folder at /workspace/SpeakerDiarisation-Python/profiles.yml
+[0m09:25:55.421673 [debug] [MainThread]: Starter project path: /workspace/.pyenv_mirror/user/current/lib/python3.12/site-packages/dbt/include/starter_project
+[0m09:25:55.425404 [info ] [MainThread]: 
+Your new dbt project "test_profiles" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m09:25:55.426060 [info ] [MainThread]: Setting up your profile.
+[0m09:27:23.087602 [info ] [MainThread]: Profile test_profiles written to /workspace/SpeakerDiarisation-Python/profiles.yml/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m09:27:23.089089 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 87.68317, "process_user_time": 2.545355, "process_kernel_time": 0.167879, "process_mem_max_rss": "109968", "process_out_blocks": "80", "process_in_blocks": "0"}
+[0m09:27:23.090009 [debug] [MainThread]: Command `dbt init` succeeded at 09:27:23.089736 after 87.68 seconds
+[0m09:27:23.090642 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9839736480>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f983857e6c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f98383cfa40>]}
+[0m09:27:23.091336 [debug] [MainThread]: Flushing usage events

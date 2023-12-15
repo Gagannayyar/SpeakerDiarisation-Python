@@ -11,7 +11,7 @@ WITH _top_manufacturers AS (
         ROW_NUMBER() OVER (ORDER BY SUM(sku_value_sales_usd) DESC) AS rank,
         GETDATE() AS created_timestamp
     FROM
-        DEV_CBI_GLOBAL.CORE_RAW.T_SAMPLE_DBT_TEST
+        DEV_CBI_EMEA.CORE_RAW.T_L0_PYTHIA_SKU_PREVIOUS_DELIVERY
     WHERE
         channel_type = 'Total'
         AND gsr_flag = 1

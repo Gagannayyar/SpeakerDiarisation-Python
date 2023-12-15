@@ -21,7 +21,7 @@ WITH _selection AS (
             ELSE 'M'
         END AS frequency
     FROM
-        DEV_CBI_GLOBAL.CORE_RAW.T_SAMPLE_DBT_TEST
+        DEV_CBI_GLOBAL.CORE_RAW.T_L1_PYTHIA_SKU_PREVIOUS_DELIVERY
     WHERE
         (
             -- by default include total channel type

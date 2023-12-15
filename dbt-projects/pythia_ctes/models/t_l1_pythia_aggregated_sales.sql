@@ -23,7 +23,7 @@ WITH _brand_sales AS (
                 SELECT
                     manufacturer
                 FROM
-                    {{ref('t_sample_db_global_competitors')}}
+                    {{ref('t_l1_pythia_global_competitors')}}
                 WHERE
                     rank <= 10
             ) THEN manufacturer
@@ -35,7 +35,7 @@ WITH _brand_sales AS (
                 SELECT
                     manufacturer
                 FROM
-                    {{ref('t_sample_db_global_competitors')}}
+                    {{ref('t_l1_pythia_global_competitors')}}
                 WHERE
                     rank <= 10
             ) THEN manufacturer || ' Brands'

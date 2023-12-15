@@ -19,7 +19,7 @@ WITH _multibrand_and_competitor_manufacturers AS (
         frequency,
         last_period
     FROM
-        {{ ref('t_sample_db_aggregated_test') }}
+        {{ ref('t_l1_pythia_aggregated_sales') }}
     GROUP BY
         market,
         supplier,
@@ -44,7 +44,7 @@ WITH _multibrand_and_competitor_manufacturers AS (
         frequency,
         last_period
     FROM
-        {{ ref('t_sample_db_aggregated_test') }}
+        {{ ref('t_l1_pythia_aggregated_sales') }}
     WHERE
         manufacturer <> 'Kenvue'
     GROUP BY
@@ -92,7 +92,7 @@ _category_level AS (
         SUM(volume_sales) AS volume_sales,
         MAX(delivery_timestamp) AS delivery_timestamp
     FROM
-        {{ ref('t_sample_db_aggregated_test') }}
+        {{ ref('t_l1_pythia_aggregated_sales') }}
     GROUP BY
         region,
         cluster,
@@ -148,7 +148,7 @@ _manufacturer_level AS (
         SUM(x.volume_sales) AS volume_sales,
         MAX(x.delivery_timestamp) AS delivery_timestamp
     FROM
-        {{ ref('t_sample_db_aggregated_test') }} AS x
+        {{ ref('t_l1_pythia_aggregated_sales') }} AS x
         JOIN
         _multibrand_and_competitor_manufacturers AS y
         ON
@@ -226,7 +226,7 @@ _brand_level AS (
         volume_sales,
         delivery_timestamp
     FROM
-        {{ ref('t_sample_db_aggregated_test') }}
+        {{ ref('t_l1_pythia_aggregated_sales') }}
     WHERE
         manufacturer = 'Kenvue'
 ),

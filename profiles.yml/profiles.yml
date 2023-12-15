@@ -1,0 +1,13 @@
+pythia_ctes:
+  outputs:
+    dev:
+      account: KENVUE-CY11773
+      database: DEV_CBI_EMEA
+      password: C]QUDcE+jYWT~Xs?6hr9
+      role: DEV_CBI_EMEA_DEVELOPER_FR
+      schema: CORE_RAW
+      threads: 4
+      type: snowflake
+      user: SA-CBI-EMEA-SNOWPARK-DEV
+      warehouse: DEV_CBI_EMEA_APP1_WH
+  target: dev
