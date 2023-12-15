@@ -1,13 +1,12 @@
--- dbt model for hierarchical sales
--- File: models/hierarchical_sales.sql
+-- models/my_project/hierarchical_sales.sql
 
--- Configuration for the dbt model
-{{ config(
-    materialized='table',
-    tags=['hierarchical_sales']
-) }}
+{{
+    config(
+        materialized = 'table'
+    )
+}}
 
--- Common Table Expressions (CTEs)
+-- Hierarchical sales for Kenvue brands and top 10 competitors (all calendars)
 WITH _multibrand_and_competitor_manufacturers AS (
     SELECT
         market,
@@ -61,7 +60,6 @@ WITH _multibrand_and_competitor_manufacturers AS (
     HAVING
         COUNT(DISTINCT brand) = 1
 ),
-
 _category_level AS (
     SELECT
         region,
@@ -115,7 +113,6 @@ _category_level AS (
         true_date,
         report_date
 ),
-
 _manufacturer_level AS (
     SELECT
         x.region,
@@ -193,7 +190,6 @@ _manufacturer_level AS (
         x.true_date,
         x.report_date
 ),
-
 _brand_level AS (
     SELECT
         region,
@@ -234,7 +230,6 @@ _brand_level AS (
     WHERE
         manufacturer = 'Kenvue'
 ),
-
 _levels AS (
     SELECT * FROM _category_level
     UNION ALL
@@ -242,12 +237,10 @@ _levels AS (
     UNION ALL
     SELECT * FROM _brand_level
 )
-
--- Main SELECT statement
 SELECT
-    MD5(market || supplier || source || channel || category || manufacturer || brand || frequency || last_period) AS series_id,
+    md5(market || supplier || source || channel || category || manufacturer || brand || frequency || last_period) AS series_id,
     *,
-    CURRENT_TIMESTAMP AS created_timestamp
+    GETDATE() AS created_timestamp
 FROM
     _levels
 ORDER BY

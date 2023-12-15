@@ -23,7 +23,7 @@ WITH _brand_sales AS (
                 SELECT
                     manufacturer
                 FROM
-                    DEV_CBI_GLOBAL.CORE_RAW.T_SAMPLE_DB_GLOBAL_COMPETITORS
+                    {{ref('t_sample_db_global_competitors')}}
                 WHERE
                     rank <= 10
             ) THEN manufacturer
@@ -35,7 +35,7 @@ WITH _brand_sales AS (
                 SELECT
                     manufacturer
                 FROM
-                    DEV_CBI_GLOBAL.CORE_RAW.T_SAMPLE_DB_GLOBAL_COMPETITORS
+                    {{ref('t_sample_db_global_competitors')}}
                 WHERE
                     rank <= 10
             ) THEN manufacturer || ' Brands'
@@ -54,7 +54,7 @@ WITH _brand_sales AS (
         volume_sales,
         delivery_timestamp
     FROM
-        DEV_CBI_GLOBAL.CORE_RAW.T_SAMPLE_DB_BRAND_SALES_TEST
+        {{ref('t_sample_db_brand_sales_test')}}
 )
 
 SELECT
