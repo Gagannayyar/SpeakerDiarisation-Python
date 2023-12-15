@@ -23,7 +23,7 @@ WITH _brand_sales AS (
                 SELECT
                     manufacturer
                 FROM
-                    DEV_CBI_GLOBAL.CORE_RAW.t_pythia_l1_reference_global_competitors
+                    DEV_CBI_GLOBAL.CORE_RAW.T_SAMPLE_DB_GLOBAL_COMPETITORS
                 WHERE
                     rank <= 10
             ) THEN manufacturer
@@ -35,7 +35,7 @@ WITH _brand_sales AS (
                 SELECT
                     manufacturer
                 FROM
-                    DEV_CBI_GLOBAL.CORE_RAW.t_pythia_l1_reference_global_competitors
+                    DEV_CBI_GLOBAL.CORE_RAW.T_SAMPLE_DB_GLOBAL_COMPETITORS
                 WHERE
                     rank <= 10
             ) THEN manufacturer || ' Brands'
